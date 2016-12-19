@@ -15,7 +15,6 @@
 		007A1E6D1E02EA5300AAA880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007A1E6B1E02EA5300AAA880 /* LaunchScreen.storyboard */; };
 		007A1E781E02EA5400AAA880 /* QuickTipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A1E771E02EA5400AAA880 /* QuickTipTests.swift */; };
 		007A1E831E02EA5400AAA880 /* QuickTipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A1E821E02EA5400AAA880 /* QuickTipUITests.swift */; };
-		007A1E911E078AD800AAA880 /* diningpatio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 007A1E901E078AD800AAA880 /* diningpatio.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		007A1E7E1E02EA5400AAA880 /* QuickTipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickTipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		007A1E821E02EA5400AAA880 /* QuickTipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickTipUITests.swift; sourceTree = "<group>"; };
 		007A1E841E02EA5400AAA880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		007A1E901E078AD800AAA880 /* diningpatio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = diningpatio.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,6 @@
 				007A1E691E02EA5300AAA880 /* Assets.xcassets */,
 				007A1E6B1E02EA5300AAA880 /* LaunchScreen.storyboard */,
 				007A1E6E1E02EA5300AAA880 /* Info.plist */,
-				007A1E901E078AD800AAA880 /* diningpatio.jpg */,
 				007A1E661E02EA5300AAA880 /* QuickTip.xcdatamodeld */,
 			);
 			path = QuickTip;
@@ -241,7 +238,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				007A1E911E078AD800AAA880 /* diningpatio.jpg in Resources */,
 				007A1E6D1E02EA5300AAA880 /* LaunchScreen.storyboard in Resources */,
 				007A1E6A1E02EA5300AAA880 /* Assets.xcassets in Resources */,
 				007A1E651E02EA5300AAA880 /* Main.storyboard in Resources */,
