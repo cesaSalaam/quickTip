@@ -10,16 +10,91 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let tipPercentages = [0.1, 0.15, 0.20]
+    
+    var menuShowing = false
+    
+    @IBOutlet weak var menuView: UIView!
+    
+    @IBOutlet weak var leadingMenuVIewConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var percentController: UISegmentedControl!
+    
+    @IBOutlet weak var billInputField: UITextField!
+    
+    @IBOutlet weak var singlePersonBill: UILabel!
+    
+    @IBOutlet weak var doublePersonBill: UILabel!
+    
+    @IBOutlet weak var triplePersonBill: UILabel!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func segmentClicked(_ sender: Any) {
+        
+        let total = calculateTip(input: tipPercentages)
+        
+        self.singlePersonBill.text = String(format: "$%.2f", total)
+        
+        self.doublePersonBill.text = String(format: "$%.2f", total/2)
+        
+        self.triplePersonBill.text = String(format: "$%.2f", total/3)
     }
-
-
+    
+    @IBAction func totalChanged(_ sender: Any) {
+        
+        let total = calculateTip(input: tipPercentages)
+        
+        self.singlePersonBill.text = String(format: "$%.2f", total)
+        
+        self.doublePersonBill.text = String(format: "$%.2f", total/2)
+        
+        self.triplePersonBill.text = String(format: "$%.2f", total/3)
+    }
+    
+    func calculateTip(input: [Double]) -> Double{
+        
+        let bill = Double(self.billInputField.text!) ?? 0
+        
+        let total = bill + bill * input[percentController.selectedSegmentIndex]
+        
+        return total
+    }
+    
+    @IBAction func backGroundTapped(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func moreButtonClicked(_ sender: Any) {
+        
+        if(menuShowing){
+            
+            //If menu is showing, then hide menu.
+            
+            leadingMenuVIewConstraint.constant = -140 // moving view off of screen
+            
+            //Removing the shadow from the menuView
+            menuView.layer.shadowOpacity = 0
+            menuView.layer.shadowRadius = 3
+        }else{
+            
+            //If menu is not showing, then show menu
+            
+            leadingMenuVIewConstraint.constant = 0 // Bringing menu into main view.
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                
+                //Animation on menu view. Adds a sliding out animation.
+                
+                self.view.layoutIfNeeded()
+            })
+            //Adding a shadow to the menuView.
+            menuView.layer.shadowOpacity = 1
+            menuView.layer.shadowRadius = 6
+        }
+        
+        menuShowing = !menuShowing //Toggling menuShowing boolean variable.
+    }
 }
 
