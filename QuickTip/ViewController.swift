@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     var menuShowing = false
     
+    @IBOutlet weak var tipAmount: UILabel!
     @IBOutlet weak var menuView: UIView!
     
     @IBOutlet weak var leadingMenuVIewConstraint: NSLayoutConstraint!
@@ -35,31 +36,36 @@ class ViewController: UIViewController {
         
         let total = calculateTip(input: tipPercentages)
         
-        self.singlePersonBill.text = String(format: "$%.2f", total)
+        self.tipAmount.text = String(format: "Tip: $%.2f", total[1])
         
-        self.doublePersonBill.text = String(format: "$%.2f", total/2)
+        self.singlePersonBill.text = String(format: "$%.2f", total[0])
         
-        self.triplePersonBill.text = String(format: "$%.2f", total/3)
+        self.doublePersonBill.text = String(format: "$%.2f", total[0]/2)
+        
+        self.triplePersonBill.text = String(format: "$%.2f", total[0]/3)
     }
     
     @IBAction func totalChanged(_ sender: Any) {
         
         let total = calculateTip(input: tipPercentages)
         
-        self.singlePersonBill.text = String(format: "$%.2f", total)
+        self.tipAmount.text = String(format: "(Tip: $%.2f)", total[1])
         
-        self.doublePersonBill.text = String(format: "$%.2f", total/2)
+        self.singlePersonBill.text = String(format: "$%.2f", total[0])
         
-        self.triplePersonBill.text = String(format: "$%.2f", total/3)
+        self.doublePersonBill.text = String(format: "$%.2f", total[0]/2)
+        
+        self.triplePersonBill.text = String(format: "$%.2f", total[0]/3)
     }
     
-    func calculateTip(input: [Double]) -> Double{
+    func calculateTip(input: [Double]) -> [Double]{
         
         let bill = Double(self.billInputField.text!) ?? 0
         
         let total = bill + bill * input[percentController.selectedSegmentIndex]
-        
-        return total
+        let tip = bill * input[percentController.selectedSegmentIndex]
+        let tempArray = [total, tip]
+        return tempArray
     }
     
     @IBAction func backGroundTapped(_ sender: Any) {

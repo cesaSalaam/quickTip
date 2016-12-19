@@ -83,9 +83,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbc-eN-Ijv">
-                                <rect key="frame" x="16" y="279" width="168" height="34"/>
+                                <rect key="frame" x="16" y="279" width="82" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="eUm-Xo-EFh"/>
+                                    <constraint firstAttribute="height" constant="34" id="w6g-Ia-zI5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -124,6 +124,12 @@
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Per Person (Tip Included)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="359-ta-UyW">
+                                <rect key="frame" x="94" y="343" width="265" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAk-rI-Yqu">
                                 <rect key="frame" x="16" y="380" width="341" height="3"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -138,10 +144,13 @@
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Per Person (Tip Included)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="359-ta-UyW">
-                                <rect key="frame" x="94" y="343" width="265" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guN-Ar-iMf">
+                                <rect key="frame" x="16" y="314" width="148" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="v87-OY-HBM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -152,8 +161,8 @@
                             <constraint firstItem="tuJ-Ss-t5I" firstAttribute="baseline" secondItem="359-ta-UyW" secondAttribute="firstBaseline" id="12W-a6-5DD"/>
                             <constraint firstItem="j3P-Lf-RNu" firstAttribute="top" secondItem="QAk-rI-Yqu" secondAttribute="bottom" constant="3" id="2T5-9t-9Kv"/>
                             <constraint firstItem="359-ta-UyW" firstAttribute="trailing" secondItem="LzX-nJ-jAY" secondAttribute="trailing" id="2Zi-FK-gZI"/>
-                            <constraint firstItem="Rbc-eN-Ijv" firstAttribute="top" secondItem="LzX-nJ-jAY" secondAttribute="bottom" constant="24" id="2xA-4z-DXZ"/>
                             <constraint firstItem="Wo7-53-Jx6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="5Rr-CQ-Qji"/>
+                            <constraint firstItem="Rbc-eN-Ijv" firstAttribute="centerY" secondItem="bdd-Zg-Xmp" secondAttribute="centerY" id="9Ar-Hp-XfI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hrj-j1-MMd" secondAttribute="trailing" constant="2" id="BGk-Sm-5n4"/>
                             <constraint firstItem="fxP-Dl-F0e" firstAttribute="leading" secondItem="5to-wV-0cf" secondAttribute="leading" id="BUk-dj-TIX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zd6-rx-ioD" secondAttribute="bottom" constant="153" id="Cu0-vQ-22X"/>
@@ -161,28 +170,31 @@
                             <constraint firstItem="KyM-KB-B9x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="F8y-PT-bPx"/>
                             <constraint firstItem="QAk-rI-Yqu" firstAttribute="leading" secondItem="tuJ-Ss-t5I" secondAttribute="leading" id="GYJ-fc-psT"/>
                             <constraint firstItem="KyM-KB-B9x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-140" id="Ge1-e6-Yab"/>
-                            <constraint firstItem="Rbc-eN-Ijv" firstAttribute="centerY" secondItem="bdd-Zg-Xmp" secondAttribute="centerY" id="JX3-e6-GO9"/>
+                            <constraint firstItem="Hrj-j1-MMd" firstAttribute="leading" secondItem="guN-Ar-iMf" secondAttribute="trailing" constant="33" id="Ib0-ZX-mvg"/>
+                            <constraint firstItem="Rbc-eN-Ijv" firstAttribute="leading" secondItem="bdd-Zg-Xmp" secondAttribute="leading" id="LuI-ja-fd2"/>
                             <constraint firstItem="Hrj-j1-MMd" firstAttribute="leading" secondItem="j3P-Lf-RNu" secondAttribute="leading" id="NpW-LM-DnQ"/>
-                            <constraint firstItem="Hrj-j1-MMd" firstAttribute="leading" secondItem="Rbc-eN-Ijv" secondAttribute="trailing" constant="13" id="PC8-Kq-hXM"/>
+                            <constraint firstItem="tuJ-Ss-t5I" firstAttribute="top" secondItem="guN-Ar-iMf" secondAttribute="bottom" constant="8" symbolic="YES" id="OSM-KL-03t"/>
                             <constraint firstItem="zd6-rx-ioD" firstAttribute="top" secondItem="j3P-Lf-RNu" secondAttribute="bottom" constant="10" id="PT9-fR-l8e"/>
                             <constraint firstItem="359-ta-UyW" firstAttribute="trailing" secondItem="zd6-rx-ioD" secondAttribute="trailing" id="Pcb-Ga-yPn"/>
                             <constraint firstItem="QAk-rI-Yqu" firstAttribute="trailing" secondItem="j3P-Lf-RNu" secondAttribute="trailing" id="Q9X-uv-ozO"/>
                             <constraint firstItem="5to-wV-0cf" firstAttribute="top" secondItem="fxP-Dl-F0e" secondAttribute="bottom" constant="35" id="R3s-uk-ZwU"/>
                             <constraint firstItem="zd6-rx-ioD" firstAttribute="leading" secondItem="5to-wV-0cf" secondAttribute="trailing" constant="90" id="Tea-PA-2K7"/>
                             <constraint firstItem="QAk-rI-Yqu" firstAttribute="top" secondItem="359-ta-UyW" secondAttribute="bottom" constant="16" id="X6W-1M-r4Z"/>
+                            <constraint firstItem="guN-Ar-iMf" firstAttribute="top" secondItem="Rbc-eN-Ijv" secondAttribute="bottom" constant="1" id="ZcE-Rg-u7o"/>
                             <constraint firstItem="j3P-Lf-RNu" firstAttribute="leading" secondItem="fxP-Dl-F0e" secondAttribute="trailing" constant="99" id="adS-Rz-qZV"/>
                             <constraint firstItem="Wo7-53-Jx6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bMY-2d-k6Q"/>
+                            <constraint firstItem="Rbc-eN-Ijv" firstAttribute="top" secondItem="LzX-nJ-jAY" secondAttribute="bottom" constant="24" id="cKA-Pz-y6D"/>
                             <constraint firstItem="Wo7-53-Jx6" firstAttribute="trailing" secondItem="LzX-nJ-jAY" secondAttribute="trailing" id="ceK-Nb-b60"/>
                             <constraint firstItem="5to-wV-0cf" firstAttribute="centerY" secondItem="zd6-rx-ioD" secondAttribute="centerY" id="iDp-n7-hhZ"/>
                             <constraint firstItem="Hrj-j1-MMd" firstAttribute="top" secondItem="LzX-nJ-jAY" secondAttribute="bottom" constant="8" symbolic="YES" id="k3S-cs-xfL"/>
-                            <constraint firstItem="Rbc-eN-Ijv" firstAttribute="leading" secondItem="bdd-Zg-Xmp" secondAttribute="leading" id="lnd-Jc-imu"/>
+                            <constraint firstItem="Rbc-eN-Ijv" firstAttribute="trailing" secondItem="fxP-Dl-F0e" secondAttribute="trailing" id="lSX-KN-LuP"/>
+                            <constraint firstItem="guN-Ar-iMf" firstAttribute="leading" secondItem="bdd-Zg-Xmp" secondAttribute="leading" id="nYE-aD-a4r"/>
                             <constraint firstItem="KyM-KB-B9x" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="p4f-XM-vgt"/>
                             <constraint firstItem="Wo7-53-Jx6" firstAttribute="leading" secondItem="LzX-nJ-jAY" secondAttribute="leading" id="pYM-AI-oK8"/>
                             <constraint firstItem="bdd-Zg-Xmp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="296" id="rVu-Q5-fUL"/>
                             <constraint firstItem="QAk-rI-Yqu" firstAttribute="trailing" secondItem="Hrj-j1-MMd" secondAttribute="trailing" id="tsl-dI-yaa"/>
                             <constraint firstItem="QAk-rI-Yqu" firstAttribute="leading" secondItem="bdd-Zg-Xmp" secondAttribute="leading" id="uGs-nX-HvJ"/>
                             <constraint firstItem="Wo7-53-Jx6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xhc-ch-JeR"/>
-                            <constraint firstItem="tuJ-Ss-t5I" firstAttribute="top" secondItem="Rbc-eN-Ijv" secondAttribute="bottom" constant="30" id="yRD-x5-fiJ"/>
                             <constraint firstItem="QAk-rI-Yqu" firstAttribute="leading" secondItem="fxP-Dl-F0e" secondAttribute="leading" id="z3u-49-Qvi"/>
                             <constraint firstItem="LzX-nJ-jAY" firstAttribute="top" secondItem="Wo7-53-Jx6" secondAttribute="bottom" constant="37" id="zcc-Oc-yc1"/>
                             <constraint firstItem="LzX-nJ-jAY" firstAttribute="leading" secondItem="bdd-Zg-Xmp" secondAttribute="leading" id="ztk-SX-CkM"/>
@@ -209,6 +221,7 @@
                         <outlet property="menuView" destination="KyM-KB-B9x" id="cdB-mE-Xg7"/>
                         <outlet property="percentController" destination="LzX-nJ-jAY" id="Zu9-8Z-iq1"/>
                         <outlet property="singlePersonBill" destination="Hrj-j1-MMd" id="b7m-Sm-YYd"/>
+                        <outlet property="tipAmount" destination="guN-Ar-iMf" id="tzh-Zu-Jyo"/>
                         <outlet property="triplePersonBill" destination="zd6-rx-ioD" id="tMM-4d-YNt"/>
                     </connections>
                 </viewController>
